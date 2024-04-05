@@ -10831,7 +10831,7 @@ html {
 }
 
 .page-section {
-  padding: 6rem 0;
+  padding: 6rem;
 }
 .page-section .page-section-heading {
   font-size: 2.25rem;
@@ -10978,8 +10978,16 @@ html {
 .masthead .masthead-subheading {
   font-size: 1.25rem;
 }
+.mask{
+  display: inline-block;
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+  overflow: hidden;
+}
 .masthead .masthead-avatar {
-  width: 15rem;
+  position: relative;
+  height: 100%;
 }
 
 @media (min-width: 992px) {
@@ -10992,7 +11000,7 @@ html {
     line-height: 3.5rem;
   }
   .masthead .masthead-subheading {
-    font-size: 1.5rem;
+    font-size: 1.5.rem
   }
 }
 .portfolio .portfolio-item {
@@ -11043,4 +11051,18 @@ html {
 
 .copyright {
   background-color: #1a252f;
+}
+
+.exp_skill{
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+  gap: 30%;
+}
+
+.social-links{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-top: 2rem;
 }
