@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="backgroound.css">
+    <title>Backgroound</title>
+    <script>
+        function ChangeColor() {
+            let min = 0;
+            let max = 0xffffff;
+            let color = "#" + Math.floor(Math.random() * (max - min) + min).toString(16);
+            let button = document.getElementById("btn");
+            let width = button.offsetWidth + 5;
+            let height = button.offsetHeight + 5;
+            document.body.style.backgroundColor = color;
+            button.style.width = width + "px";
+            button.style.height = height + "px";
+        }
+    </script>
+</head>
+
+<body>
+    <button id="btn" onclick="ChangeColor()">Click me</button>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Básico</title>
+	<style>
+		body {
+			background-color: pink;
+		}
+
+		h1 {
+			text-align: center;
+			color: white;
+		}
+
+		img {
+			width: 400px;
+			height: 400px;
+		}
+
+		.row {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			gap: .5rem;
+		}		
+
+		p {
+			text-align: right;
+			font-family: monospace;
+			font-style: italic;
+		}
+
+		.column {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			gap: 1rem;
+			/* margin: 2%; */
+		}
+
+		a {
+			text-align: center;
+			/* display: block; */
+		}
+	</style>
+</head>
+
+<body>
+	<h1>€¡Tiendas Online!€</h1>
+	<div class="row">
+		<div class="column">
+			<img src="https://i.pinimg.com/736x/0a/06/60/0a06600cc3cedeb49280b54114c88ce6.jpg" alt="Amazon">
+			<a href="https://www.amazon.es/">Amazon</a>
+		</div>
+		<div class="column">
+			<img src="https://ae01.alicdn.com/kf/S384ad607b50840368357b49632f266a2M/VIP.png" alt="Aliexpress">
+			<a href="https://es.aliexpress.com/">AliExpress</a>
+		</div>
+	</div>
+	<hr>
+	<p>© fmoran 2024</p>
+</body>
+
+</html>

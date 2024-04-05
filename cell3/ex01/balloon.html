@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background-color: red;
+        }
+    </style>
+    <script>
+        let i = 0;
+
+        function changeColor(circle, flag)
+        {
+            const colors = ["red", "green", "blue"];
+            circle.style.backgroundColor = colors[i];
+            if (flag == 1){
+                if (i == 2){
+                    i = 0;
+                    circle.style.backgroundColor = colors[i];
+                }
+                else{
+                    i++;
+                    circle.style.backgroundColor = colors[i];
+                }
+            }
+            else{
+                if (i == 0){
+                    i = 2;
+                    circle.style.backgroundColor = colors[i];
+                }
+                else{
+                    i--;
+                    circle.style.backgroundColor = colors[i];
+                }
+            }
+        }
+        function makeBigger(circle){
+            let width;
+            let height;
+            const colors = ["red", "green", "blue"];
+
+            width = circle.offsetWidth + 10;
+            height = circle.offsetHeight + 10;
+            if (width > 420){
+                width = 200;
+                height = 200;
+            }
+            circle.style.width = width + "px";
+            circle.style.height = height + "px";
+        }
+
+        function transformCircle(){
+            let circle = document.getElementById("myCircle");
+            makeBigger(circle);
+            changeColor(circle, 1);
+        }
+
+        function makeSmall(){
+            const circle = document.getElementById("myCircle");
+            let width;
+            let height;
+
+            width = circle.offsetWidth - 5;
+            height = circle.offsetHeight - 5;
+            if (width < 200){
+                width = 200;
+                height = 200;
+            }
+            circle.style.width = width + "px";
+            circle.style.height = height + "px";
+            changeColor(circle, 0);
+        }
+    </script>
+    <title>Circle</title>
+</head>
+<body>
+    <div id="myCircle" onclick="transformCircle()" onmouseout="makeSmall()"></div>
+</body>
+</html>

@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+body{
+    background-color: #884299;
+}
+#check{
+    display: none;
+}
+svg{
+    position: fixed;
+    left: 49vw;
+    top: 2%;
+    transform: scale(3);
+}
+li{
+    height: 7vh;
+    line-height: 7vh;
+    text-align: center;
+    width: 100%;
+}
+.std{
+    background-color: #64107b; 
+}
+.nostd{
+    background-color: #985b0f; 
+}
+ul{
+    color: white;
+    position: fixed;
+    left: -100%;
+    list-style: none;
+}
+#check:checked ~ ul{
+    width: 100%;
+    left: 0%;
+    top: 7%;
+}
